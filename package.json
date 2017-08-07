@@ -1,0 +1,32 @@
+{
+  "name": "comic-sites",
+  "version": "0.0.1",
+  "description": "Everybody loves websites with Comic Sans font. This package makes it easier to turn all your fonts to Comic Sans.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/komlew/comic-sites.git"
+  },
+  "keywords": [
+    "comic",
+    "comic-sans",
+    "comicsans",
+    "fonts",
+    "font"
+  ],
+  "author": "Alex D. Komlev",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/komlew/comic-sites/issues"
+  },
+  "homepage": "https://komlew.github.io/comic-sites/",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.4.1"
+  }
+}
