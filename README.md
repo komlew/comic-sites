@@ -23,13 +23,21 @@ initComicFont();
 
 // this function accepts a string argument to replace Comic Sans to another font;
 // if you know a better font than Comic Sans, try the following:
-initComicFont(`"Comic Neue", sans-serif`);
+initComicFont(`"Comic Neue"`);
 ```
 
 ## Demo
 
 Open [this demo](https://komlew.github.io/comic-sites/) page with a random JS library introduction and click on buttons **Get Started** or **Take the Tutorial**. All fonts on the page will be turned into Comic Sans. Enjoy!
 
+## Whitelisted fonts
+Fonts whitelisting is controlled by [font-scrubber](https://www.npmjs.com/package/font-scrubber) package. Is allows only this list of fonts:
+* "Comic Sans MS"
+* "Comic Neue"
+* Impact
+* Papyrus
+
+Be careful: font-scrubber package is made for educational purposes only. Don't use this code on production!
 
 ## Warning!
 
