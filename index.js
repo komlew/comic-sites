@@ -1,4 +1,4 @@
-'use strict';
+const scrubFontName = require(`font-scrubber`);
 
 /**
  * Creates style node and writes css styles in it
@@ -36,9 +36,11 @@ function initComicFont(fontName) {
         return styleNode.sheet;
     }
 
+    // make sure this font is acceptable;
+    // for more info read https://www.npmjs.com/package/font-scrubber
+    const font = scrubFontName(fontName);
+
     // creating font-family string and applying it to all elements
-    // TODO: clean fontName argument removing special characters and semicolon
-    const font = fontName || `"Comic Sans MS", cursive, sans-serif`;
     const styles = `* {font-family: ${font} !important}`;
 
     // returning the style node as result of applying this css rule
