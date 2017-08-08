@@ -93,7 +93,7 @@ describe(`initComicFont function without parameters`, () => {
     expect(styleSheet.cssRules[0].style[0]).toBe(`font-family`);
   });
   it(`returns CSSStyleSheet with Comic Sans as font-family`, () => {
-    expect(styleSheet.cssRules[0].style[`font-family`]).toBe(`"Comic Sans MS", cursive, sans-serif`);
+    expect(styleSheet.cssRules[0].style[`font-family`]).toBe(`"Comic Sans MS"`);
   });
 });
 
@@ -103,7 +103,7 @@ describe(`initComicFont function with parameter`, () => {
   let styleSheet;
 
   beforeEach(() => {
-    styleSheet = initComicFont(`"Comic Neue", sans-serif`);
+    styleSheet = initComicFont(`"Comic Neue"`);
   });
 
   afterEach(() => {
@@ -120,6 +120,6 @@ describe(`initComicFont function with parameter`, () => {
     expect(styleSheet.cssRules[0].style[0]).toBe(`font-family`);
   });
   it(`returns CSSStyleSheet with Comic Neue as font-family`, () => {
-    expect(styleSheet.cssRules[0].style[`font-family`]).toBe(`"Comic Neue", sans-serif`);
+    expect(styleSheet.cssRules[0].style[`font-family`]).toBe(`"Comic Neue"`);
   });
 });
