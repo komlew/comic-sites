@@ -20,7 +20,7 @@ function createStyleNode(styles) {
 
     // attaching the node to the DOM and returning its reference
     document.getElementsByTagName(`head`)[0].appendChild(styleNode);
-    return styleNode;
+    return styleNode.sheet;
 }
 
 /**
@@ -33,7 +33,7 @@ function initComicFont(fontName) {
     const styleNode = document.getElementById(`comicSitesStyleNode`);
     if (styleNode) {
         // TODO: overwrite existing rule with new value
-        return styleNode;
+        return styleNode.sheet;
     }
 
     // creating font-family string and applying it to all elements
@@ -45,4 +45,7 @@ function initComicFont(fontName) {
     return createStyleNode(styles);
 }
 
-module.exports = initComicFont;
+module.exports = {
+    createStyleNode,
+    initComicFont
+};

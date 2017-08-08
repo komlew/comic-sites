@@ -16,14 +16,14 @@ $ npm install comic-sites
 
 ```js
 // load comic-sites as dependency
-import toComicSans from 'comic-sites';
+import { initComicFont } from 'comic-sites';
 
 // call the function you imported earlier
-toComicSans();
+initComicFont();
 
 // this function accepts a string argument to replace Comic Sans to another font;
 // if you know a better font than Comic Sans, try the following:
-toComicSans(`"Comic Neue", sans-serif`);
+initComicFont(`"Comic Neue", sans-serif`);
 ```
 
 ## Demo
